@@ -3,7 +3,6 @@ module.exports = {
       "browser": true,
       "es6": true
    },
-   "extends": "eslint:recommended",
    "globals": {
       "Atomics": "readonly",
       "SharedArrayBuffer": "readonly"
@@ -31,7 +30,6 @@ module.exports = {
       }
    },
    "rules": {
-      "no-console": "warn",
       "no-eval": "error",
       "react-hooks/rules-of-hooks": "error",
       "react-hooks/exhaustive-deps": "warn",
@@ -65,7 +63,6 @@ module.exports = {
       ],
       "linebreak-style": 0,
       // enable additional rules
-      "indent": ["error", 3],
       "quotes": [
          "error",
          "double",

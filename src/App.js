@@ -1,9 +1,20 @@
 import React from "react";
+// React Routers
+import { BrowserRouter as Router} from "react-router-dom";
+// Importando Paginas.
+import Header from "layout/Header";
+import Pages from "routes";
+import Footer from "layout/Footer";
 
-function App() {
+export default function App() {
    return (
-      <div>Manolo</div>
+      <Router>
+         {/* Header section --------------------------------------------- */}
+         <Header />
+         {/* Body section ----------------------------------------------- */}
+         <Pages />
+         {/* Footer section --------------------------------------------- */}
+         <Footer />
+      </Router>
    );
 }
-
-export default App;
