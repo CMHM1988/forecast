@@ -7,11 +7,8 @@ import { Map, TileLayer, Marker, Popup } from "react-leaflet";
    width: 500px;
    height: 500px;
 }
-*/
 
-export default function Maps() {
-   return (
-      <div>
+<div>
          <Map center={[51.51, -0.13]} zoom={10}>
             <TileLayer
                attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -24,5 +21,11 @@ export default function Maps() {
             </Marker>
          </Map>
       </div>
+
+*/
+
+export default function Maps() {
+   return (
+      <div style={{backgroundColor:"yellow"}}>Mapa</div>
    );
 }

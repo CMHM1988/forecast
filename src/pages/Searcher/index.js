@@ -3,12 +3,16 @@ import React from "react";
 // Importando componentes.
 import Search from "components/Searcher/Search";
 import Maps from "components/Searcher/Maps";
+import Weather from "components/Searcher/Weather";
+// Hoja de estilos.
+import "styles/searcher.css";
 
 export default function Searcher() {
    return (
-      <div>
+      <form className="searcher-grid grid mleft-auto mright-auto mtop25">
          <Search />
          <Maps />
-      </div>
+         <Weather />
+      </form>
    );
 }

@@ -1,0 +1,9 @@
+.box-container {
+   background-color: #0288d1;
+   height: 90px;
+}
+
+.box-container .title {
+   color: #fff;
+   font-size: 2.1rem;
+}

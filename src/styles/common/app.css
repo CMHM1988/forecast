@@ -1,0 +1,44 @@
+/* Global Styles ------------------------------------------------------------ */
+body
+{
+   color: #666;
+}
+
+body, textarea, input, button, a, h1, h2, h3, h4, h5, h6
+{
+   font-family: Helvetica, 'Open Sans';
+}
+/* Fields ------------------------------------------------------------------- */
+.app-text-field {
+   height: 30px;
+   border: 1px solid #C9C9C9;
+}
+.app-text-field input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+   color: #CCCCCC;
+}
+.app-text-field input::-moz-placeholder { /* Chrome/Opera/Safari */
+   color: #CCCCCC;
+}
+.app-text-field input:-ms-input-placeholder { /* Chrome/Opera/Safari */
+   color: #CCCCCC;
+}
+.app-text-field input:-moz-placeholder { /* Chrome/Opera/Safari */
+   color: #CCCCCC;
+}
+.app-text-field-error {
+   border: 1px solid red !important;
+}
+.app-text-field-selected {
+   border: 1px solid #0099FF;
+}
+/* Button ------------------------------------------------------------------- */
+.app-button-blue {
+   color: white;
+   background-color: #0099FF;
+   border: 1px solid #0066FF;
+}
+/* Size --------------------------------------------------------------------- */
+.size-100x25 {
+   width:100px;
+   height: 25px;
+}

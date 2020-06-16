@@ -1,11 +1,13 @@
 // Importando referencias de react.
 import React from "react";
+// Impostando estilos.
+import "styles/header.css";
 
 // Inicializando react functional component.
 export default function Header() {
    return (
-      <div>
-         <span>Header</span>
-      </div>
+      <header className="box-container flex flex-center">
+         <label htmlFor="" className="title">React Weather Forecast by H Enterprise</label>
+      </header>
    );
 }

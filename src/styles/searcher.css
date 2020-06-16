@@ -1,0 +1,10 @@
+.searcher-grid {
+   justify-content: center;
+   grid-template-rows: 30px 500px;
+   grid-auto-columns: 430px;
+   grid-gap: 20px;
+}
+
+.searcher-grid .search {
+   grid-column: 1 / span 2;
+}
