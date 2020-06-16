@@ -1,16 +1,14 @@
 // Importando referencias de react.
-import React, { useState } from "react";
+import React from "react";
+// Importando custom hooks.
+import useInput from "hooks/useInput";
 
 // Exportando functional component.
 function Search({onSubmit}) {
-   //
-   const [keyword, setKeyword] = useState("");
+   // Custom hooks.
+   const [keyword, bindKeyword, resetKeyword] = useInput("");
    // Creacion de eventos.
-   const handleChange = e => {
-         // Asignando el valor del input al estado.
-         setKeyword(e.target.value);
-      },
-      handleSearch = e => {
+   const handleSearch = e => {
          // Ejecutaoms la busqueda con el valor actualizado
          e.preventDefault();
          // Evento del padre para ejecutar la busqueda.
@@ -20,7 +18,7 @@ function Search({onSubmit}) {
          // Limpiamos los valores.
          e.preventDefault();
          //
-         console.log("Clear");
+         resetKeyword("");
       };
    return (
       <div className="search flex flex-center">
@@ -28,7 +26,7 @@ function Search({onSubmit}) {
             type="text"
             className="app-text-field border-box pleft10 pright10 mright15 flex-grow-1"
             placeholder="City to search"
-            onChange={handleChange}
+            {...bindKeyword}
          />
          <button
             className="app-button-blue no-border font12 size-100x30 mright15"
