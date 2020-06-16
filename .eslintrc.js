@@ -61,6 +61,7 @@ module.exports = {
          "error",
          3
       ],
+      "react/prop-types": [0],
       "linebreak-style": 0,
       // enable additional rules
       "quotes": [

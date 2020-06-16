@@ -8,6 +8,15 @@ body, textarea, input, button, a, h1, h2, h3, h4, h5, h6
 {
    font-family: Helvetica, 'Open Sans';
 }
+/* Tags --------------------------------------------------------------------- */
+button {
+   border-color: #CCC;
+   border-style: solid;
+   border-width: 1px;
+   cursor: pointer;
+   font-size: 13px;
+   outline-width: 0;
+}
 /* Fields ------------------------------------------------------------------- */
 .app-text-field {
    height: 30px;
@@ -37,8 +46,13 @@ body, textarea, input, button, a, h1, h2, h3, h4, h5, h6
    background-color: #0099FF;
    border: 1px solid #0066FF;
 }
+.app-button-gray {
+   color: #666666;
+   background-color: #F2F2F2;
+   border: 1px solid #C9C9C9 !important;
+}
 /* Size --------------------------------------------------------------------- */
-.size-100x25 {
+.size-100x30 {
    width:100px;
-   height: 25px;
+   height: 30px;
 }
