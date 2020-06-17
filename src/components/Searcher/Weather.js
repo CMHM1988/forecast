@@ -2,10 +2,35 @@
 import React from "react";
 
 // Inicializando react functional component.
-export default function Weather() {
+function Weather({values}) {
+   // Exrayendo valores para llenar el formato.
+   const { name, main } = values;
+   // Retornando componente.
    return (
-      <div style={{backgroundColor:"blue"}}>
-         <span>Weather</span>
-      </div>
+      <aside className="weather-container grid">
+         <label htmlFor="" className="font-bold result-name">{name}</label>
+         <p>
+            <label htmlFor="" className="font-bold">Temperature:</label>
+            <label htmlFor="">{main.temp} °C</label>
+         </p>
+         <p>
+            <label htmlFor="" className="font-bold">Pressure:</label>
+            <label htmlFor="">{main.pressure} pci</label>
+         </p>
+         <p>
+            <label htmlFor="" className="font-bold">Humidity:</label>
+            <label htmlFor="">{main.humidity} %</label>
+         </p>
+         <p>
+            <label htmlFor="" className="font-bold">Max temperature:</label>
+            <label htmlFor="">{main.temp_max} °C</label>
+         </p>
+         <p>
+            <label htmlFor="" className="font-bold">Min temperature:</label>
+            <label htmlFor="">{main.temp_min} °C</label>
+         </p>
+      </aside>
    );
 }
+
+export default React.memo(Weather);

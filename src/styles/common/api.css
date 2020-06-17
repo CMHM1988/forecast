@@ -29,21 +29,11 @@ body {
 .full-width {
    width: 100%;
 }
-.mid-width {
-   width: 50%;
-}
 .mleft-auto {
    margin-left: auto;
 }
 .mright-auto {
    margin-right: auto;
-}
-/* Distribution ------------------------------------------------------------- */
-.relative {
-   position: relative;
-}
-.absolute {
-   position: absolute;
 }
 /* Grid styles -------------------------------------------------------------- */
 .grid {
@@ -182,4 +172,12 @@ body {
 /* Font Size ---------------------------------------------------------------- */
 .font12 {
    font-size: 12px;
+}
+/* Font Text styles --------------------------------------------------------- */
+.font-bold {
+   font-weight: bold;
+}
+/* Text --------------------------------------------------------------------- */
+.text-center {
+   text-align: center;
 }

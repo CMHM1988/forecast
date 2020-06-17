@@ -1,10 +1,29 @@
 .searcher-grid {
+   grid-auto-columns: 800px;
    justify-content: center;
    grid-template-rows: 30px 500px;
-   grid-auto-columns: 430px;
    grid-gap: 20px;
 }
 
-.searcher-grid .search {
-   grid-column: 1 / span 2;
+.weather-container,
+.leaflet-container {
+   box-shadow: 2px 2px 8px 1px rgba(0,0,0,0.3);
+   border-radius: 2%;
+}
+
+.weather-container {
+   padding: 25px;
+   align-items: center;
+   grid-auto-rows: 30px;
+   grid-row-gap: 10px;
+}
+
+.info-container {
+   grid-gap: 20px;
+   grid-template-columns: 500px;
+   grid-auto-flow: column;
+}
+
+.weather-container .result-name {
+   place-self: center;
 }

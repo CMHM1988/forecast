@@ -1,31 +1,20 @@
 // Importando librerias de react.
 import React from "react";
-import { Map, TileLayer, Marker, Popup } from "react-leaflet";
+import { Map, TileLayer, Marker } from "react-leaflet";
 
-/*
-   .leaflet-container {
-   width: 500px;
-   height: 500px;
-}
-
-<div>
-         <Map center={[51.51, -0.13]} zoom={10}>
-            <TileLayer
-               attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            />
-            <Marker position={[51.51, -0.13]}>
-               <Popup>
-                  A pretty CSS3 popup. <br /> Easily customizable.
-               </Popup>
-            </Marker>
-         </Map>
-      </div>
-
-*/
-
-export default function Maps() {
+function Maps({coord}) {
+   //
+   const { lat, lon } = coord;
+   //
    return (
-      <div style={{backgroundColor:"yellow"}}>Mapa</div>
+      <Map center={[lat, lon]} zoom={10}>
+         <TileLayer
+            attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+         />
+         <Marker position={[lat, lon]} />
+      </Map>
    );
 }
+
+export default React.memo(Maps);
