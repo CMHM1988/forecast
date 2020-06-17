@@ -11,7 +11,7 @@ function Weather({values}) {
          <label htmlFor="" className="font-bold result-name">{name}</label>
          <p>
             <label htmlFor="" className="font-bold">Temperature: </label>
-            <label htmlFor="">{main.temp - 273.15} °C</label>
+            <label htmlFor="">{parseFloat(main.temp - 273.15, 10).toFixed(2)} °C</label>
          </p>
          <p>
             <label htmlFor="" className="font-bold">Pressure: </label>
@@ -23,11 +23,11 @@ function Weather({values}) {
          </p>
          <p>
             <label htmlFor="" className="font-bold">Max temperature: </label>
-            <label htmlFor="">{main.temp_max - 273.15} °C</label>
+            <label htmlFor="">{parseFloat(main.temp_max - 273.15, 10).toFixed(2)} °C</label>
          </p>
          <p>
             <label htmlFor="" className="font-bold">Min temperature: </label>
-            <label htmlFor="">{main.temp_min - 273.15} °C</label>
+            <label htmlFor="">{parseFloat(main.temp_min - 273.15, 10).toFixed(2)} °C</label>
          </p>
       </aside>
    );
