@@ -3,7 +3,7 @@ import React from "react";
 import { BrowserRouter as Router} from "react-router-dom";
 // Importando Paginas.
 import Header from "layout/Header";
-import Pages from "routes";
+import Searcher from "pages/Searcher";
 
 export default function App() {
    return (
@@ -11,7 +11,7 @@ export default function App() {
          {/* Header section --------------------------------------------- */}
          <Header />
          {/* Body section ----------------------------------------------- */}
-         <Pages />
+         <Searcher />
       </Router>
    );
 }
