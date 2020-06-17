@@ -10,24 +10,24 @@ function Weather({values}) {
       <aside className="weather-container grid">
          <label htmlFor="" className="font-bold result-name">{name}</label>
          <p>
-            <label htmlFor="" className="font-bold">Temperature:</label>
-            <label htmlFor="">{main.temp} °C</label>
+            <label htmlFor="" className="font-bold">Temperature: </label>
+            <label htmlFor="">{main.temp - 273.15} °C</label>
          </p>
          <p>
-            <label htmlFor="" className="font-bold">Pressure:</label>
+            <label htmlFor="" className="font-bold">Pressure: </label>
             <label htmlFor="">{main.pressure} pci</label>
          </p>
          <p>
-            <label htmlFor="" className="font-bold">Humidity:</label>
+            <label htmlFor="" className="font-bold">Humidity: </label>
             <label htmlFor="">{main.humidity} %</label>
          </p>
          <p>
-            <label htmlFor="" className="font-bold">Max temperature:</label>
-            <label htmlFor="">{main.temp_max} °C</label>
+            <label htmlFor="" className="font-bold">Max temperature: </label>
+            <label htmlFor="">{main.temp_max - 273.15} °C</label>
          </p>
          <p>
-            <label htmlFor="" className="font-bold">Min temperature:</label>
-            <label htmlFor="">{main.temp_min} °C</label>
+            <label htmlFor="" className="font-bold">Min temperature: </label>
+            <label htmlFor="">{main.temp_min - 273.15} °C</label>
          </p>
       </aside>
    );
