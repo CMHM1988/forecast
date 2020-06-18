@@ -1,5 +1,6 @@
 // Importando referencias de react.
 import React, { useRef, useState, useEffect } from "react";
+import PropTypes from "prop-types";
 // Importando valores externos.
 import { WEATHER_KEY, WEATHER_URL } from "services/settings";
 
@@ -67,4 +68,10 @@ function Search({setResponse}) {
    );
 }
 
+// Documentando componente.
+Screen.propTypes = {
+   setResponse: PropTypes.func.isRequired
+};
+
+// Exportando componente.
 export default React.memo(Search);

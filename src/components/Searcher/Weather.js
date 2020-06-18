@@ -1,5 +1,6 @@
 // Importando librerias de react.
 import React from "react";
+import PropTypes from "prop-types";
 
 // Inicializando react functional component.
 function Weather({values}) {
@@ -33,4 +34,10 @@ function Weather({values}) {
    );
 }
 
+// Documentando componente.
+Screen.propTypes = {
+   setResponse: PropTypes.object.isRequired
+};
+
+// Exportando componente.
 export default React.memo(Weather);
