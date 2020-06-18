@@ -29,8 +29,13 @@ function Weather({values}) {
             <label htmlFor="">{main.humidity} %</label>
          </p>
          <p className="font10 grid-align-self-end">
-            <label htmlFor="" className="font-bold">Weather data from: </label>
-            <label htmlFor="">https://openweathermap.org/</label>
+            <label htmlFor="" className="font-bold">Visit </label>
+            <a
+               className="blue"
+               href="https://openweathermap.org/"
+               target="_blank"
+               rel="noopener noreferrer">openweathermap.org</a>
+            <label htmlFor="" className="font-bold"> for mor information</label>
          </p>
       </aside>
    );
