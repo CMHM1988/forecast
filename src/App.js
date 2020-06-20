@@ -1,7 +1,7 @@
 import React from "react";
 // Importando Paginas.
 import Header from "layout/Header";
-import Searcher from "pages/Searcher";
+import Searcher from "pages";
 
 export default function App() {
    return (

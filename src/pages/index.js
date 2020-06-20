@@ -1,10 +1,10 @@
 // Importando referencias de react.
 import React, { useState } from "react";
 // Importando componentes.
-import Search from "components/Searcher/Search";
+import Search from "components/Search";
 // Hoja de estilos.
 import "styles/searcher.css";
-import Screen from "components/Searcher/Screen";
+import Screen from "components/Screen";
 
 // Inicializando react functional component.
 export default function Searcher() {
