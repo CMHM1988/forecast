@@ -7,20 +7,7 @@ import useSearchLocation from "hooks/useSearchLocation";
 // Exportando functional component.
 function Search({setResponse}) {
    //
-   const [searchRef, bindSearch, reset] = useSearchLocation("", setResponse),
-      // Creacion de eventos.
-      handleSearch = e => {
-         // Ejecutaoms la busqueda con el valor actualizado
-         e.preventDefault();
-         //
-         bindSearch();
-      },
-      handleClear = e => {
-         // Limpiamos los valores.
-         e.preventDefault();
-         // Evento del padre para ejecutar la busqueda.
-         reset("");
-      };
+   const [searchRef, searchLocation, reset] = useSearchLocation("", setResponse);
    //
    return (
       <form className="search flex flex-center">
@@ -32,11 +19,11 @@ function Search({setResponse}) {
          />
          <button
             className="app-button-blue no-border font12 size-100x30 mright15"
-            onClick={handleSearch}
+            {...searchLocation}
          >Search</button>
          <button
             className="app-button-gray no-border font12 size-100x30"
-            onClick={handleClear}
+            {...reset}
          >Clear</button>
       </form>
    );

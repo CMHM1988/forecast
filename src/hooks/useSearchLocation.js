@@ -9,18 +9,28 @@ function useSearchLocation(initialValue, setResponse) {
    //
    const [keyword, setKeyword] = useState(initialValue),
       // Reseteando el valor incial.
-      reset = () => {
-         /// Limpiando valor.
-         searchRef.current.value = "";
-         // Evento del padre para ejecutar la busqueda.
-         setKeyword("");
+      bindReset = {
+         //
+         onClick: e => {
+            // Limpiamos los valores.
+            e.preventDefault();
+            /// Limpiando valor.
+            searchRef.current.value = "";
+            // Evento del padre para ejecutar la busqueda.
+            setKeyword("");
+         }
       },
       // Declarando funcion para actualizar el input.
-      bindSearch = () => {
-         // Validando campo vacio antes de actualizar.
-         if (searchRef.current.value.trim() !== "") {
-            // Evento del padre para ejecutar la busqueda.
-            setKeyword(searchRef.current.value);
+      bindSearch = {
+         //
+         onClick: e => {
+            // Ejecutaoms la busqueda con el valor actualizado
+            e.preventDefault();
+            // Validando campo vacio antes de actualizar.
+            if (searchRef.current.value.trim() !== "") {
+               // Evento del padre para ejecutar la busqueda.
+               setKeyword(searchRef.current.value);
+            }
          }
       };
    useEffect(() => {
@@ -43,7 +53,7 @@ function useSearchLocation(initialValue, setResponse) {
       }
    }, [keyword, setResponse]);
    // Restornando valores para su ejecucion.
-   return [searchRef, bindSearch, reset];
+   return [searchRef, bindSearch, bindReset];
 }
 
 export default useSearchLocation;
